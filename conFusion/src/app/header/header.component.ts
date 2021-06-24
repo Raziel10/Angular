@@ -12,6 +12,9 @@ export class HeaderComponent implements OnInit {
   constructor(public dialog: MatDialog) { }
 
   ngOnInit() {
+  }
+
+  openLoginForm() {
     this.dialog.open(LoginComponent, {width: '500px', height: '450px'});
   }
 
