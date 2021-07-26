@@ -14,7 +14,7 @@
   </div>
 
   <div fxFlex="40">
-    <div fxFlex *ngIf="dish">
+    <div fxFlex *ngIf="dish" [@visibility] = "visibility" [@expand]>
       <mat-card>
         <mat-card-header>
           <mat-card-title>
@@ -46,7 +46,7 @@
   </div>
 
   <div fxFlex="40" class="container" fxLayout= "column wrap">
-    <mat-list fxFlex *ngIf="dish">
+    <mat-list fxFlex *ngIf="dish" [@visibility] = "visibility" [@expand]>
       <h1>Comments</h1>
       <mat-list-item *ngFor="let comment of dish.comments">
         <h1 matLine>{{comment.comment}}</h1>
